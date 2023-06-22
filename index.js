@@ -186,11 +186,15 @@ function SonDegerlendirmeyiAl(array) {
 	]
 */
 
-function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function PuanaGoreDegerlendirmeAl(array, puan) {
+    for (let i=0; i<array.length; i++){
+		if((array[i].puan>3.99) && (array[i].puan)<4.91){
+			console.log(array[i])
+		}
+	}
 }
 
-
+console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler, 4))
 /*  BONUS 2:    
 	UzunDegerlendirmeleriAl fonksiyonuna aşağıdakileri uygulayın:
 	1. Tüm değerlendirmeleri içeren diziyi alacak
@@ -198,8 +202,19 @@ function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
 	
 */
 
-function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function UzunDegerlendirmeleriAl(array) {
+    const uzunDeger = [];
+	for (let i=0; i<array.length; i++){
+		let geri = array[i]['geribildirim'];
+		let uzunDeger = [...uzunDeger];
+		let length3 = geri.trim().split(/\s+/).length;
+		if(length3 >15) {
+			return uzunDeger.push(array[i]);
+		} else {
+			return uzunDeger;
+		}
+	}
+	return uzunDeger;
 }
 
 
@@ -221,11 +236,21 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 */
 
 
-function arabaYapici(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function arabaYapici(kmsayaci) {
+    
+	const araba =
+	{
+
+		surus : function(mesafe) {
+		return kmsayaci + mesafe;
+		}
+	}
+
     
 }
 
+
+//console.log(araba1.surus(100))
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
 function sa(){
