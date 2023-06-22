@@ -92,7 +92,7 @@ const degerlendirmeler = [
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-
+console.log(degerlendirmeler[5].geribildirim);
 
 
 /*  Görev 4 (ototest yok):  
@@ -101,8 +101,8 @@ const degerlendirmeler = [
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
 
-
-
+degerlendirmeler[7].geribildirim = degerlendirmeler[7].geribildirim + "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+console.log(degerlendirmeler[7].geribildirim);
 /*  Görev 5: 
 	isim, puan, geribildirim'i içeren bir değerlendirme nesnesi oluşturup, yeni değerlendirmeyi mevcut dizinin(array) sonuna ekleyip sonuç dizisini döndüren bir fonksiyon tanımlayın. 
 	
@@ -115,9 +115,14 @@ const degerlendirmeler = [
 */
 
 
-function DegerlendirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
-	
+function DegerlendirmeEkle(degerlendirmeler, isim, puan, geribildirim){
+	const degerlendirmelerNew = [...degerlendirmeler];
+	const NewDeger = {};
+	NewDeger.isim = isim;
+	NewDeger.puan = puan;
+	NewDeger.geribildirim = geribildirim;
+	degerlendirmelerNew.push(NewDeger);
+	return degerlendirmelerNew;
 }
 
 
@@ -128,7 +133,7 @@ function DegerlendirmeEkle(/*Kodlar buraya */){
 	Aşağıdaki AnahtardanDegerlendirmeAl fonksiyonu kullanarak aşağıdakileri uygulayın:
 	1. Argüman olarak bir diziyi ilk parametresi olarak alacak
 	2. Dizinin kullanılmak istenen indeksini ikinci parametre olarak alacak
-	3. Fonksiyon şu stringi döndürmeli: "{isim} isimli kişi {puan} puan verdi ve şunları yazdı: {geribildirim}"
+	3. Fonksiyon şu stringi döndürmeli: "{geribildirim} isimli kişi {puan} puan verdi ve şunları yazdı: {geribildirim}"
 	Örnek: AnahtardanDegerlendirmeAl(degerlendirmeler,0) şunu döndürmeli: "Nalan isimli kişi 5 puan verdi ve şunları yazdı: Mükemmel atmosfer ve mükemmel vegan seçenekleri!"
 */
 
