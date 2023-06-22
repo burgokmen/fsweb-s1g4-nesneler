@@ -161,8 +161,11 @@ function AnahtardanDegerlendirmeAl(array, index) {
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(array) {
+	let isim = array[array.length-1].isim;
+	let puan = array[array.length-1].puan;
+	let geribildirim = array[array.length-1].geribildirim;
+	return `${isim} isimli kişi ${puan} puan verdi ve şunları yazdı: ${geribildirim}`
 } 
 
 
