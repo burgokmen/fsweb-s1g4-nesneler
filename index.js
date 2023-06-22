@@ -62,9 +62,17 @@ const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
-	
+	indirim : function(str) {
+		if ((str == "öğretmen") || (str =="öğrenci")) {
+			return this.fiyat * 0.75;
+		} else {
+			return this.fiyat * 0.9; 
+		}
+	}
 
 }
+
+console.log(burger.indirim("öğretmen"));
 
 
 
