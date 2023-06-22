@@ -138,8 +138,11 @@ function DegerlendirmeEkle(degerlendirmeler, isim, puan, geribildirim){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function AnahtardanDegerlendirmeAl(array, index) {
+	let isim = array[index].isim;
+	let puan = array[index].puan;
+	let geribildirim = array[index].geribildirim;
+	return `${isim} isimli kişi ${puan} puan verdi ve şunları yazdı: ${geribildirim}`
 
 }
 
