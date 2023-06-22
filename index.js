@@ -15,10 +15,18 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 */
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
+function MenuElemaniOlustur(isim, fiyat, kategori){
+	
+	return {
+		isim : isim,
+		fiyat : fiyat,
+		kategori: kategori
+	}
+	
 }
+	
 
+console.log(MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler'))
 
 
 /*  Görev 1b (otomatik test yok): 
@@ -30,9 +38,13 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
+const menu1 = MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar");
+const menu2 = MenuElemaniOlustur("Hamburger",12,"Hamburgerler");
+const menu3 = MenuElemaniOlustur("Manti",8,"Turk Mutfagi");
 
-
-
+console.log(menu1)
+console.log(menu2)
+console.log(menu3)
 /* Görev 2: 
 	Özel bir öğle yemeği yiyorsun! Öğretmen ve öğrencilere %25, diğer kişilere %10 indirim var. Aşağıdaki burger nesnesine, indirimi fiyatı otomatik olarak hesaplayan bir metot ekleyin.
 	
@@ -50,6 +62,7 @@ const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
+	
 
 }
 
