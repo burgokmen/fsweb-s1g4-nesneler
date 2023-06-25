@@ -266,14 +266,14 @@ function arabaYapici(ilkKm, markaAdi, vitesM, colorC) {
   };
   return araba;
 }
-const araba4x4 = new arabaYapici(10, 'ford', 'auto', 'blue');
+const araba4x4 = new arabaYapici(10, "ford", "auto", "blue");
 const araba2x2 = new arabaYapici(0);
 
-console.log('4X4 surus', araba4x4.surus(80));
-console.log('4X4 surus', araba4x4.surus(20));
-console.log(araba4x4)
-console.log('2X2 surus', araba2x2.surus(25));
-console.log('2X2 surus', araba2x2.surus(82));
+console.log("4X4 surus", araba4x4.surus(80));
+console.log("4X4 surus", araba4x4.surus(20));
+console.log(araba4x4);
+console.log("2X2 surus", araba2x2.surus(25));
+console.log("2X2 surus", araba2x2.surus(82));
 //console.log(araba1.surus(100))
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
